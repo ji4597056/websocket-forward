@@ -1,6 +1,7 @@
 # Websocket Forward
 
-- A simple library to enable web socket proxy support in spring boot applications.
+- The simple library is used to support the forward proxy of websocket for applications which are based in the framework of `spring boot`.
+- The library is based on `JDK8`.
 
 ## USAGE
 
@@ -16,7 +17,7 @@
 
 ## Who is this for?
 
-Spring Cloud Zuul and Spring Boot Websocket does not natively support web sockets to proxy requests.Usually,we need to use the weboscket proxy.
+Spring Cloud Zuul and Spring Boot Websocket do not support the forward proxy of web sockets. However, we usually need the proxy of weboscket.
 
 ## How do I use this?
 
@@ -47,22 +48,22 @@ ws:
         allowedOrigins: "*"
         withJs: false
 ```
-With this you should have web sockets to your back-end service working correctly.
+With this you can accurately get websockets support from proxied back-end service.
 
 ## Configuration instruction
 
 | property  | type | required | default | introduction |
 |--------|--------|--------|--------|-------|
-| enabled            | boolean  | false | true   | is enabled |  
+| enabled            | boolean  | false | true   | enabled or not |
 | prefix             | string   | false | null   | uri route prefix |
 | uri                | string   | true  | null   | uri |
-| withJs             | boolean  | false | false  | is withJs |
-| forwardPrefix      | string   | false | null   | forward prefix |    
-| serviceId          | string   | false | null   | find forward addresses from registration center by service id |
-| listOfServices     | string[] | false | null   | find forward addresses from list of services if not setting `serviceId`,eg:localhost:8080 |
+| withJs             | boolean  | false | false  | with JS or not |
+| forwardPrefix      | string   | false | null   | forward uri route prefix |
+| serviceId          | string   | false | null   | find forward addresses from registration center by `service id` |
+| listOfServices     | string[] | false | null   | find forward addresses from list of services if `serviceId` is not set,eg:localhost:8080 |
 | allowedOrigins     | string[] | false | null   | allowed origins |
-| handlerClass       | string   | false | null   | name of `AbstractWsServerHandler` class,use global handler if not setting |
-| interceptorClasses | string[] | false | null   | name of `HandshakeInterceptor` class,use global interceptors if not setting |
+| handlerClass       | string   | false | null   | name of `AbstractWsServerHandler` class,use global handler if there is not set |
+| interceptorClasses | string[] | false | null   | name of `HandshakeInterceptor` class,use global interceptors if there is not set |
 
 ## Remark
 
@@ -76,4 +77,4 @@ if you want to set your own `AbstractWsServerHandler` or `HandshakeInterceptor`,
         return registration;
     }
 ```
-Then you can set the property of handlerClass` or `interceptorClasses`.
+Then you can set the property of `handlerClass` or `interceptorClasses`.

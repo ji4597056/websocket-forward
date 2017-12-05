@@ -85,6 +85,8 @@ public abstract class AbstractWsServerHandler extends AbstractWebSocketHandler {
 
     /**
      * close client
+     *
+     * @param session WebSocketSession
      */
     private void closeGracefully(WebSocketSession session) {
         Optional.ofNullable(CHANNELS.get(session.getId()))
