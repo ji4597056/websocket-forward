@@ -50,7 +50,7 @@ ws:
 ```
 With this you can accurately get websockets support from proxied back-end service.
 
-## Configuration instruction
+## Configuration introduction
 
 | property  | type | required | default | introduction |
 |--------|--------|--------|--------|-------|
@@ -61,7 +61,7 @@ With this you can accurately get websockets support from proxied back-end servic
 | forwardPrefix      | string   | false | null   | forward uri route prefix |
 | serviceId          | string   | false | null   | find forward addresses from registration center by `service id` |
 | listOfServices     | string[] | false | null   | find forward addresses from list of services if `serviceId` is not set,eg:localhost:8080 |
-| allowedOrigins     | string[] | false | null   | allowed origins |
+| allowedOrigins     | string[] | false | "*"    | allowed origins |
 | handlerClass       | string   | false | null   | name of `AbstractWsServerHandler` class,use global handler if there is not set |
 | interceptorClasses | string[] | false | null   | name of `HandshakeInterceptor` class,use global interceptors if there is not set |
 
