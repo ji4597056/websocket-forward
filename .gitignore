@@ -1,0 +1,41 @@
+### Maven ###
+.mvn
+/targrt/
+out/
+/out/
+build/
+/build/
+mvnw
+mvnw.cmd
+
+### Gradle ###
+.gradle
+target/
+!gradle/wrapper/gradle-wrapper.jar
+gradlew
+gradlew.bat
+gradle/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### sonar ###
+.scannerwork
