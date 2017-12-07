@@ -17,7 +17,7 @@
 
 ## Who is this for?
 
-Spring Cloud Zuul and Spring Boot Websocket do not support the forward proxy of web sockets. However, we usually need the proxy of weboscket.
+Spring Cloud Zuul and Spring Boot Websocket do not support the forwarding proxy of web sockets. However, we usually need the proxy of weboscket.
 
 ## How do I use this?
 
@@ -58,9 +58,9 @@ With this you can accurately get websockets support from proxied back-end servic
 | prefix             | string   | false | null   | uri route prefix |
 | uri                | string   | true  | null   | uri |
 | withJs             | boolean  | false | false  | with JS or not |
-| forwardPrefix      | string   | false | null   | forward uri route prefix |
-| serviceId          | string   | false | null   | find forward addresses from registration center by `service id` |
-| listOfServices     | string[] | false | null   | find forward addresses from list of services if `serviceId` is not set,eg:localhost:8080 |
+| forwardPrefix      | string   | false | null   | forwarding uri route prefix |
+| serviceId          | string   | false | null   | find forwarding addresses from registration center by `service id` |
+| listOfServices     | string[] | false | null   | find forwarding addresses from list of services if `serviceId` is not set,eg:localhost:8080 |
 | allowedOrigins     | string[] | false | "*"    | allowed origins |
 | handlerClass       | string   | false | null   | name of `AbstractWsServerHandler` class,use global handler if there is not set |
 | interceptorClasses | string[] | false | null   | name of `HandshakeInterceptor` class,use global interceptors if there is not set |
