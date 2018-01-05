@@ -109,7 +109,8 @@ public class WsForwardClientHandler extends SimpleChannelInboundHandler<Object> 
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) {
-        LOGGER.info("WebSocket Client disconnected!");
+        ctx.close();
+        closeWebSocketSession();
     }
 
     @Override
@@ -150,6 +151,13 @@ public class WsForwardClientHandler extends SimpleChannelInboundHandler<Object> 
             handshakeFuture.setFailure(cause);
         }
         ctx.close();
+        closeWebSocketSession();
+    }
+
+    /**
+     * close websocket session
+     */
+    private void closeWebSocketSession() {
         if (webSocketSession.isOpen()) {
             try {
                 webSocketSession.close();
