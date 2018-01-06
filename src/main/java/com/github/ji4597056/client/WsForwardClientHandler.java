@@ -44,6 +44,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPromise;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.FullHttpResponse;
+import io.netty.handler.codec.http.websocketx.CloseWebSocketFrame;
 import io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker;
 import io.netty.handler.codec.http.websocketx.WebSocketFrame;
 import io.netty.handler.codec.http.websocketx.WebSocketHandshakeException;
@@ -133,6 +134,10 @@ public class WsForwardClientHandler extends SimpleChannelInboundHandler<Object> 
                     ", content=" + response.content().toString(CharsetUtil.UTF_8) + ')');
         }
         // handler websocket message
+        if (msg instanceof CloseWebSocketFrame) {
+            closeWebSocketSession();
+            return;
+        }
         Optional.ofNullable(msg).map(frame -> messageFilter.toMessage((WebSocketFrame) frame))
             .filter(message -> message instanceof WebSocketMessage)
             .ifPresent(message -> {

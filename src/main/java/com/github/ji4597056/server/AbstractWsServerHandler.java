@@ -93,7 +93,7 @@ public abstract class AbstractWsServerHandler extends AbstractWebSocketHandler {
             .ifPresent(channel -> {
                 try {
                     if (channel.isOpen()) {
-                        channel.closeFuture();
+                        channel.close();
                     }
                 } catch (Exception e) {
                     LOGGER.warn("Close websocket forward client error!error: {}", e);
