@@ -11,7 +11,7 @@
 	<dependency>
 		<groupId>com.github.ji4597056</groupId>
 		<artifactId>spring-websocket-forward</artifactId>
-		<version>1.0.0.RELEASE</version>
+		<version>1.0.2.RELEASE</version>
 	</dependency>
 ```
 
