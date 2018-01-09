@@ -3,7 +3,7 @@
 - The simple library is used to support the forward proxy of websocket for applications which are based in the framework of `spring boot`.
 - The library is based on `JDK8`.
 
-## USAGE
+## Usage
 
 `spring-websocket-forward` is available from `Maven Central`.
 
