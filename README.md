@@ -17,7 +17,7 @@
 
 ## Who is this for?
 
-Spring Cloud Zuul and Spring Boot Websocket do not support the forwarding proxy of web sockets. However, we usually need the proxy of weboscket.
+Spring Cloud Zuul and Spring Boot Websocket do not support the forwarding proxy of web sockets. However, we usually need the proxy of websocket.
 
 ## How do I use this?
 
