@@ -60,7 +60,7 @@ With this you can accurately get websockets support from proxied back-end servic
 | withJs             | boolean  | false | false  | with JS or not |
 | forwardPrefix      | string   | false | null   | forwarding uri route prefix |
 | serviceId          | string   | false | null   | find forwarding addresses from registration center by `service id` |
-| listOfServices     | string[] | false | null   | find forwarding addresses from list of services if `serviceId` is not set,eg:localhost:8080 |
+| listOfServers     | string[] | false | null   | find forwarding addresses from list of services if `serviceId` is not set,eg:localhost:8080 |
 | allowedOrigins     | string[] | false | "*"    | allowed origins |
 | handlerClass       | string   | false | null   | name of `AbstractWsServerHandler` class,use global handler if there is not set |
 | interceptorClasses | string[] | false | null   | name of `HandshakeInterceptor` class,use global interceptors if there is not set |
